@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Mahindra Blues Festival",
+       
+        "bands": [
+            { "name": "Band X", "recordLabel": "Alpha Festival" }
+        ]
+    },
+    {
+        "name": "Sunburn",
+        
+        "bands": [
+            { "name": "Band Y", "recordLabel": "Beta Festival" }
+        ]
+    },
+    {
+        "name": "VH1 Supersonic",
+       
+       "bands": [
+           { "name": "Band A", "recordLabel": "Omega Festival" }
+        ]
+    }
+]
+

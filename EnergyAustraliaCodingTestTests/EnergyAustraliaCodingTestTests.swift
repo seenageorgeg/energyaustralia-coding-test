@@ -2,7 +2,7 @@
 //  EnergyAustraliaCodingTestTests.swift
 //  EnergyAustraliaCodingTestTests
 //
-//  Created by John Geevarghese on 04/04/23.
+//  Created by Seena George on 04/04/23.
 //
 
 import XCTest
@@ -12,6 +12,7 @@ final class EnergyAustraliaCodingTestTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        continueAfterFailure = false
     }
 
     override func tearDownWithError() throws {

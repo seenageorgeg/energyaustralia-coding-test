@@ -14,6 +14,9 @@
 		9BF06CBD29DC967500A89CFD /* EnergyAustraliaCodingTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF06CBC29DC967500A89CFD /* EnergyAustraliaCodingTestTests.swift */; };
 		9BF06CC729DC967500A89CFD /* EnergyAustraliaCodingTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF06CC629DC967500A89CFD /* EnergyAustraliaCodingTestUITests.swift */; };
 		9BF06CC929DC967500A89CFD /* EnergyAustraliaCodingTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF06CC829DC967500A89CFD /* EnergyAustraliaCodingTestUITestsLaunchTests.swift */; };
+		9BF06CDA29DCA5AE00A89CFD /* MusicFestivalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF06CD929DCA5AE00A89CFD /* MusicFestivalData.swift */; };
+		9BF06CDC29DCA8E200A89CFD /* MusicData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF06CDB29DCA8E200A89CFD /* MusicData.json */; };
+		9BF06CDF29DCFF1D00A89CFD /* MusicDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF06CDE29DCFF1D00A89CFD /* MusicDataViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		9BF06CC229DC967500A89CFD /* EnergyAustraliaCodingTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnergyAustraliaCodingTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF06CC629DC967500A89CFD /* EnergyAustraliaCodingTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyAustraliaCodingTestUITests.swift; sourceTree = "<group>"; };
 		9BF06CC829DC967500A89CFD /* EnergyAustraliaCodingTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyAustraliaCodingTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9BF06CD929DCA5AE00A89CFD /* MusicFestivalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicFestivalData.swift; sourceTree = "<group>"; };
+		9BF06CDB29DCA8E200A89CFD /* MusicData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MusicData.json; sourceTree = "<group>"; };
+		9BF06CDE29DCFF1D00A89CFD /* MusicDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDataViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,9 @@
 		9BF06C9F29DC967300A89CFD = {
 			isa = PBXGroup;
 			children = (
+				9BF06CDB29DCA8E200A89CFD /* MusicData.json */,
+				9BF06CD829DCA40400A89CFD /* Model */,
+				9BF06CDD29DCFED600A89CFD /* ViewModel */,
 				9BF06CAA29DC967300A89CFD /* EnergyAustraliaCodingTest */,
 				9BF06CBB29DC967500A89CFD /* EnergyAustraliaCodingTestTests */,
 				9BF06CC529DC967500A89CFD /* EnergyAustraliaCodingTestUITests */,
@@ -125,6 +134,22 @@
 				9BF06CC829DC967500A89CFD /* EnergyAustraliaCodingTestUITestsLaunchTests.swift */,
 			);
 			path = EnergyAustraliaCodingTestUITests;
+			sourceTree = "<group>";
+		};
+		9BF06CD829DCA40400A89CFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9BF06CD929DCA5AE00A89CFD /* MusicFestivalData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9BF06CDD29DCFED600A89CFD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9BF06CDE29DCFF1D00A89CFD /* MusicDataViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +258,7 @@
 			files = (
 				9BF06CB329DC967400A89CFD /* Preview Assets.xcassets in Resources */,
 				9BF06CB029DC967400A89CFD /* Assets.xcassets in Resources */,
+				9BF06CDC29DCA8E200A89CFD /* MusicData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF06CDF29DCFF1D00A89CFD /* MusicDataViewModel.swift in Sources */,
+				9BF06CDA29DCA5AE00A89CFD /* MusicFestivalData.swift in Sources */,
 				9BF06CAE29DC967300A89CFD /* ContentView.swift in Sources */,
 				9BF06CAC29DC967300A89CFD /* EnergyAustraliaCodingTestApp.swift in Sources */,
 			);

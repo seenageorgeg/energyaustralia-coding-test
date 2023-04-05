@@ -2,20 +2,46 @@
 //  ContentView.swift
 //  EnergyAustraliaCodingTest
 //
-//  Created by John Geevarghese on 04/04/23.
+//  Created by Seena George on 04/04/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    //    @ObservedObject var datas = ReadData()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            
+            List {
+                
+                ForEach(recordLabel) { menuItem in
+                    
+                    Section(header:
+                                HStack {
+                        
+                        Text(menuItem.name)
+                            .font(.title3)
+                            .fontWeight(.heavy)
+                        
+                    }
+                        .padding(.vertical)
+                            
+                    ) {
+                        
+                        OutlineGroup(menuItem.subBands ?? [DataItem](), children: \.subBands) {  item in
+                            HStack {
+                            
+                                Text(item.name)
+                                    .font(.system(.title3, design: .rounded))
+                                    .bold()
+                            }
+                        }
+                    }
+                }
+            }
         }
-        .padding()
+        .listStyle(.plain)
     }
 }
 
