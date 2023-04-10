@@ -17,6 +17,9 @@
 		9BF06CDA29DCA5AE00A89CFD /* MusicFestivalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF06CD929DCA5AE00A89CFD /* MusicFestivalData.swift */; };
 		9BF06CDC29DCA8E200A89CFD /* MusicData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BF06CDB29DCA8E200A89CFD /* MusicData.json */; };
 		9BF06CDF29DCFF1D00A89CFD /* MusicDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF06CDE29DCFF1D00A89CFD /* MusicDataViewModel.swift */; };
+		9BF06D7629E3BACE00A89CFD /* FestivalDataURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF06D7529E3BACE00A89CFD /* FestivalDataURL.swift */; };
+		9BF06D7829E3BBB600A89CFD /* FestivalDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF06D7729E3BBB600A89CFD /* FestivalDataService.swift */; };
+		9BF06D7D29E3BEFF00A89CFD /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF06D7C29E3BEFF00A89CFD /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		9BF06CD929DCA5AE00A89CFD /* MusicFestivalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicFestivalData.swift; sourceTree = "<group>"; };
 		9BF06CDB29DCA8E200A89CFD /* MusicData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MusicData.json; sourceTree = "<group>"; };
 		9BF06CDE29DCFF1D00A89CFD /* MusicDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDataViewModel.swift; sourceTree = "<group>"; };
+		9BF06D7529E3BACE00A89CFD /* FestivalDataURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalDataURL.swift; sourceTree = "<group>"; };
+		9BF06D7729E3BBB600A89CFD /* FestivalDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalDataService.swift; sourceTree = "<group>"; };
+		9BF06D7C29E3BEFF00A89CFD /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +86,12 @@
 		9BF06C9F29DC967300A89CFD = {
 			isa = PBXGroup;
 			children = (
+				9BF06D7429E3BA7600A89CFD /* Constants */,
 				9BF06CDB29DCA8E200A89CFD /* MusicData.json */,
 				9BF06CD829DCA40400A89CFD /* Model */,
 				9BF06CDD29DCFED600A89CFD /* ViewModel */,
+				9BF06D7329E3B92600A89CFD /* APIs */,
+				9BF06D7B29E3BED500A89CFD /* Helpers */,
 				9BF06CAA29DC967300A89CFD /* EnergyAustraliaCodingTest */,
 				9BF06CBB29DC967500A89CFD /* EnergyAustraliaCodingTestTests */,
 				9BF06CC529DC967500A89CFD /* EnergyAustraliaCodingTestUITests */,
@@ -150,6 +159,30 @@
 				9BF06CDE29DCFF1D00A89CFD /* MusicDataViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9BF06D7329E3B92600A89CFD /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				9BF06D7729E3BBB600A89CFD /* FestivalDataService.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		9BF06D7429E3BA7600A89CFD /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9BF06D7529E3BACE00A89CFD /* FestivalDataURL.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		9BF06D7B29E3BED500A89CFD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9BF06D7C29E3BEFF00A89CFD /* Helper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,8 +318,11 @@
 			files = (
 				9BF06CDF29DCFF1D00A89CFD /* MusicDataViewModel.swift in Sources */,
 				9BF06CDA29DCA5AE00A89CFD /* MusicFestivalData.swift in Sources */,
+				9BF06D7629E3BACE00A89CFD /* FestivalDataURL.swift in Sources */,
 				9BF06CAE29DC967300A89CFD /* ContentView.swift in Sources */,
 				9BF06CAC29DC967300A89CFD /* EnergyAustraliaCodingTestApp.swift in Sources */,
+				9BF06D7829E3BBB600A89CFD /* FestivalDataService.swift in Sources */,
+				9BF06D7D29E3BEFF00A89CFD /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

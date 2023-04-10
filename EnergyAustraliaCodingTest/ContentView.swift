@@ -8,40 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
-    //    @ObservedObject var datas = ReadData()
+    @ObservedObject var fetcher = FestivalDataFetcher()
     
     var body: some View {
-        NavigationView {
-            
+        NavigationStack {
             List {
-                
-                ForEach(recordLabel) { menuItem in
+                ForEach(fetcher.processedRecords,id: \.id) { breed in
+                    //                VStack(alignment: .leading, spacing: 5) {
                     
-                    Section(header:
-                                HStack {
-                        
-                        Text(menuItem.name)
-                            .font(.title3)
-                            .fontWeight(.heavy)
-                        
-                    }
-                        .padding(.vertical)
+                    Section(header: Text(breed.recordName!)
+                        .font(.title).bold()){
                             
-                    ) {
-                        
-                        OutlineGroup(menuItem.subBands ?? [DataItem](), children: \.subBands) {  item in
-                            HStack {
                             
-                                Text(item.name)
-                                    .font(.system(.title3, design: .rounded))
-                                    .bold()
+                            VStack(alignment: .leading, spacing: 15) {
+                                
+                                Text(breed.allBands!.joined(separator: "\n ")).font(.title2)
+                                    .multilineTextAlignment(.leading)
+                                .padding()}
+                            VStack(alignment: .leading, spacing: 10) {
+                                
+                                Text(breed.allFestivals!.joined(separator: "\n ")).font(.title2)
+                                    .frame(maxWidth: .infinity)
+                                    .multilineTextAlignment(.trailing).padding()
+                                
+                                
                             }
+                            
                         }
-                    }
-                }
-            }
+                    
+                }.navigationTitle("MusicFestival List")
+            }.listStyle(.insetGrouped)
         }
-        .listStyle(.plain)
     }
 }
 

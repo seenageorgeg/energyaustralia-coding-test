@@ -6,27 +6,33 @@
 //
 
 import Foundation
-import SwiftUI
 
-class ReadData: ObservableObject  {
-    @Published var users = [DataItem]()
+class FestivalDataFetcher: ObservableObject {
     
+    @Published var processedRecords = [AllRecordsModel]()
+    @Published var processedBands = [String]()
+    @Published var processedFestivals = [AllFestivals]()
+    
+    
+    private var recordService: RecordsServiceProtocol
+    
+    init(recordService: RecordsServiceProtocol = RecordsService()) {
+        self.recordService = recordService
+        getProcessedRecord()
         
-    init(){
-        loadData()
+        //        fetchAllBreeds()
     }
     
-    func loadData()  {
-        guard let url = Bundle.main.url(forResource: "MusicData", withExtension: "json")
-            else {
-                print("Json file not found")
-                return
-            }
-        
-        let data = try? Data(contentsOf: url)
-        let users = try? JSONDecoder().decode([DataItem].self, from: data!)
-        self.users = users!
-        
+    
+    
+    func getProcessedRecord() {
+        recordService.getRecords { success, records in
+            guard success else { return }
+            guard let finalRecords = records else { return }
+            self.processedRecords = finalRecords
+           // self.processedBands = processedRecords["allBand"].allBands ?? []
+            
+            print(self.processedRecords)
+        }
     }
-     
 }
